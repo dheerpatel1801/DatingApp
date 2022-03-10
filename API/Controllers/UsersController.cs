@@ -119,7 +119,7 @@ namespace API.Controllers
             user.Photos.Remove(photo);
 
             if (await _userRepository.SaveAllAsync()) return Ok();
-
+                
             return BadRequest("Failed to delete the photo");
         }
     }
