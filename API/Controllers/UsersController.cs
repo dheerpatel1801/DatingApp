@@ -1,9 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Claims;
-using System.Threading.Tasks;   
-using API.Data;
 using API.DTOs;
 using API.Entities;
 using API.Extensions;
@@ -28,6 +22,7 @@ namespace API.Controllers
             _photoService = photoService;
             _userRepository = userRepository;
         }
+
         [HttpGet]
         public async Task<ActionResult<IEnumerable<MemberDto>>> GetUsers([FromQuery]UserParams userParams)
         {
